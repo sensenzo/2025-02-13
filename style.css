@@ -1,0 +1,143 @@
+@charset "utf-8";
+
+
+
+
+
+
+/*背景色*/
+body{
+    background-color: rgb(175, 104, 104);
+}
+
+
+
+
+
+
+/*文字のレイアウト*/
+.shikiri{
+    color: rgb(255, 0, 0);           /*文字の色*/
+    background-color: aliceblue;     /*文字の背景色*/
+    font-weight:bold;                  /*太文字*/
+}
+
+
+
+
+
+
+
+#block1{
+    border: 3px solid #000000;
+
+    background: rgb(255, 187, 0);
+
+    margin: 100px 150px 100px 150px;   /*枠外の余白（上　右　下　左）の順*/
+    /*padding: 100px;   /*枠内の余白（上下左右同じ場合[marginも同じ]）*/
+
+    /*width: 500px;                /*横幅*/
+    /*height: 100px;               /*たて幅*/
+
+    font-weight: bold;
+    font-size: 30px;             /*文字のサイズ*/
+    
+    
+}
+
+.block1{
+    
+
+    text-indent: 0em;            /*冒頭に空白をつける。1em＝全角１文字*/
+    line-height: 1.8;            /*行間*/
+
+    color: rgb(255, 0, 234);
+
+    display: flex;
+    justify-content: center;    /*横方向の中央揃え*/
+    align-items: center;        /*縦方向の中央揃え*/
+}
+
+
+
+
+
+
+
+
+#block2{
+    border: 3px solid #000000;
+
+    background-image: url("./night_dubai_city_burj_khalifa_light-1920x1080.jpg");
+        /*上のは背景を画像にする。　以下の画像に関するプロパティは、上記とまとめることができる。*/
+
+    /*background-size:cover ;    /*枠全体を覆うように拡大・縮小*/
+    /*background-size: auto;     /*は、画像を元のサイズのまま表示*/
+    background-size: contain;    /*は、画面全体を表示（画像が繰り返しか、余白になるか）
+    /*background-size: 100% 100%; /* は、枠にぴったり（ゆがむ可能性あり）  */
+
+    /*background-color:beige ;  /*は、画像の一部が透明だと背景色が変わる*/
+
+    /*background-repeat: no-repeat;/*は、画像をリピートしない*/
+
+
+    width:calc(100% - 100px);   
+    /*calc(100% - 50px)は、関数を使って100%の画面から50pxを引いて表示される*/          
+    height: 260px;
+
+    transform:  translate(50px,20px) /*(x軸,y軸)の値に指定した数だけ移動。他の要素に干渉するので注意*/
+                rotate(15deg)    /*回転（右回り）*/
+                skew(25deg);   /*ゆがむ*/
+
+
+
+
+    font-weight: bold;
+    font-size: 30px;           
+    
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.block2{
+    text-indent: 0em;         
+    line-height: 1.8;       
+
+    color: rgb(255, 0, 234);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#inline{
+    text-align: center;    /*要素を画面中央に配置*/
+    /*div等の親要素に書く場合は「text-align」
+    span等の子要素に書く場合は「vertical-align」*/
+    
+    
+}
+
+.inline{
+    padding-left: 10px;     /*枠内の余白（左）*/
+    padding-right: 10px;    /*枠内の余白（右）*/
+    margin-left: 60px;    /*枠外の余白（左）*/
+    margin-right: 60px;   /*枠外の余白（右）*/
+    /*インライン要素では、上下の余白（paddingとmargin）を設定
+    すると上下の文章にかぶってしまうので使用できない*/
+
+    display: inline;    /*「display]はブロック要素とインライン要素を入れ替えることができる。*/
+    color: rgb(255, 0, 234);
+    background: rgb(0, 136, 226);
+
+    font-weight: bold;
+    font-size: 30px;
+}
